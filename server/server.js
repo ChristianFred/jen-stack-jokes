@@ -48,7 +48,7 @@ app.get('/jokes',(req,res) => {
   res.send(jokes);
 });
 
-app.post('/jokes',(res,req) => {
+app.post('/jokes',(req,res) => {
   console.log('we got a zinger');
   console.log('req.body', req.body);
   let newJoke = req.body;
