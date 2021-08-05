@@ -21,7 +21,7 @@ function addJoke() {
         data: newJoke,
     }).then((response) => {
         console.log('POST / jokes', response);
-
+        getJokes()
     }).catch(error => {
         console.log('POST /jokes failed', error);
         $('body').append(`
@@ -43,7 +43,7 @@ function getJokes() {
 
         let jokeList = $('#outputDiv');
         console.log('jokes list element', jokeList)
-
+        $('#outputDiv').empty();
         for (let joke of response){
             console.log('joke is', joke)
             jokeList.append(`
